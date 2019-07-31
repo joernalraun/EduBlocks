@@ -389,6 +389,23 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setHelpUrl("");
     }
   };
+  
+  Blocks['sleep_us'] = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField("utime.sleep_us(");
+      this.appendValueInput("sleep")
+          .setCheck(null);
+      this.appendDummyInput()
+          .appendField(")");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(maincolour, inputcolour, bordercolour);
+      this.setTooltip("Utime sleep");
+      this.setHelpUrl("");
+    }
+  };
 
   //deprecated
 
@@ -703,6 +720,20 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setHelpUrl('http://www.example.com/');
     },
   };
+  
+  Blocks['ticks_us'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField('utime.ticks_us()');
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+      this.setColour(maincolour, inputcolour, bordercolour);
+      this.setTooltip('negates a Boolean value');
+      this.setHelpUrl('http://www.example.com/');
+    },
+  };
+
 
   Blocks['break'] = {
     init: function () {
