@@ -61,7 +61,7 @@ export async function getToolBoxXml(extensions: Extension[]) {
     (await import('./circuitpython/basic/definitions')).default(Blockly.Blocks);
     (await import('./circuitpython/basic/generators')).default(Blockly.Python as any);
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'circuitpython', 'basic', 'toolbox.xml'));
-    
+
     (await import('./microbit/variables/definitions')).default(Blockly.Blocks);
     (await import('./microbit/variables/generators')).default(Blockly.Python as any);
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'microbit', 'variables', 'toolbox.xml'));
@@ -188,7 +188,7 @@ export async function getToolBoxXml(extensions: Extension[]) {
     (await import('./pi/pimoroni/definitions')).default(Blockly.Blocks);
     (await import('./pi/pimoroni/generators')).default(Blockly.Python as any);
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'pimoroni', 'toolbox.xml'));
- 
+
     (await import('./pi/requests/definitions')).default(Blockly.Blocks);
     (await import('./pi/requests/generators')).default(Blockly.Python as any);
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'requests', 'toolbox.xml'));
@@ -212,9 +212,6 @@ export async function getToolBoxXml(extensions: Extension[]) {
 }
 
 export function getBeforeScript(extensions: Extension[]) {
-  if (extensions.indexOf('scroll:bit') !== -1) {
-    return fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'microbit', 'scrollbit', 'scrollbit.py'));
-  }
   if (extensions.indexOf('GiggleBot') !== -1) {
     return fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'microbit', 'gigglebot', 'gigglebot.py'));
   }

@@ -207,7 +207,7 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     init: function () {
       this.appendDummyInput()
         .appendField(new Blockly.FieldVariable("turtle"), "turtle")
-        .appendField(".circle(")
+        .appendField(".circle(");
       this.appendValueInput('text')
         .setCheck(null);
       this.appendDummyInput()
@@ -217,14 +217,14 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setColour(240);
       this.setTooltip("Draw a circle");
       this.setHelpUrl("");
-    }
+    },
   };
 
   Blocks['goto'] = {
     init: function () {
       this.appendDummyInput()
         .appendField(new Blockly.FieldVariable("turtle"), "turtle")
-        .appendField(".goto(")
+        .appendField(".goto(");
       this.appendValueInput('text')
         .setCheck(null);
       this.appendDummyInput()
@@ -234,6 +234,6 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setColour(240);
       this.setTooltip("go to x&y");
       this.setHelpUrl("");
-    }
+    },
   };
 }
