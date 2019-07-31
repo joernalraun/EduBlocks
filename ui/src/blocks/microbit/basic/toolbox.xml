@@ -187,9 +187,4 @@
       </shadow>
     </value>
   </block>
-  
-  <label text="Miscellaneous" web-class="myLabelStyle"></label>
-
-  <block type="sleep_us"></block>
-  <block type="ticks_us"></block>
 </category>
