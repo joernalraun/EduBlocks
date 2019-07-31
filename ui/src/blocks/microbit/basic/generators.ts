@@ -8,11 +8,6 @@ export default function define(Python: Blockly.BlockGenerators) {
     const code = 'from signal import pause\n';
     return code;
   };
-  
-  Python['import_utime'] = function (block) {
-    const code = 'import utime\n';
-    return code;
-  };
 
   Python['pause_s'] = function (block) {
     const code = 'pause()\n';
@@ -185,7 +180,7 @@ export default function define(Python: Blockly.BlockGenerators) {
     var code = 'sleep(' +value_name+ ')\n';
     return code;
   };
-  
+
   Python['printnew'] = function (block) {
     var text_print = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC)
     || 'Hello World';
@@ -267,7 +262,6 @@ export default function define(Python: Blockly.BlockGenerators) {
   };
   Python['andor'] = Python['internal'];
 
-  
   Python['not'] = function (block) {
     var value_bool = Blockly.Python.valueToCode(block, 'bool', Blockly.Python.ORDER_ATOMIC);
     const code = 'not ' +  value_bool;

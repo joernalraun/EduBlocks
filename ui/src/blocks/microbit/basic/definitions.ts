@@ -28,7 +28,6 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
       this.setHelpUrl('http://www.example.com/');
     },
   };
-  
 
   Blocks['pause_s'] = {
     init: function () {
@@ -693,7 +692,6 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
     },
   };
 
-
   Blocks['break'] = {
     init: function () {
       this.appendDummyInput()
@@ -708,4 +706,3 @@ export default function define(Blocks: Blockly.BlockDefinitions) {
 
 
 }
-
