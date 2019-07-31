@@ -191,7 +191,7 @@ export async function getToolBoxXml(extensions: Extension[]) {
     (await import('./pi/pimoroni/definitions')).default(Blockly.Blocks);
     (await import('./pi/pimoroni/generators')).default(Blockly.Python as any);
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'pimoroni', 'toolbox.xml'));
-
+ 
     (await import('./pi/requests/definitions')).default(Blockly.Blocks);
     (await import('./pi/requests/generators')).default(Blockly.Python as any);
     toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'pi', 'requests', 'toolbox.xml'));
