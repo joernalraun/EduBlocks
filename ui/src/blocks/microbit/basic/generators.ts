@@ -185,6 +185,13 @@ export default function define(Python: Blockly.BlockGenerators) {
     var code = 'sleep(' +value_name+ ')\n';
     return code;
   };
+  
+  Python['sleep_us'] = function(block) {
+    var value_name = Blockly.Python.valueToCode(block, 'sleep', Blockly.Python.ORDER_ATOMIC);
+    // TODO: Assemble Python into code variable.
+    var code = 'utime.sleep_us(' +value_name+ ')\n';
+    return code;
+  };
 
   Python['printnew'] = function (block) {
     var text_print = Blockly.Python.valueToCode(block, 'text', Blockly.Python.ORDER_ATOMIC)
@@ -267,6 +274,11 @@ export default function define(Python: Blockly.BlockGenerators) {
   };
   Python['andor'] = Python['internal'];
 
+  Python['ticks_us'] = function (block) {
+    const code = 'utime.ticks_us()';
+    return [code, Blockly.Python.ORDER_ATOMIC];
+  };
+  
   Python['not'] = function (block) {
     var value_bool = Blockly.Python.valueToCode(block, 'bool', Blockly.Python.ORDER_ATOMIC);
     const code = 'not ' +  value_bool;
