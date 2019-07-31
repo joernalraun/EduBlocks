@@ -1,3 +1,4 @@
+"""
 from microbit import sleep, i2c, Image as I
 
 WIDTH = 17
@@ -162,3 +163,4 @@ for bank in [1,0]:
     _w([0] + [255] * 17)
 clear()
 show()
+"""
